@@ -1,0 +1,711 @@
+/* Reset dan Gaya Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #61dafb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Gaya Header */
+header {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #61dafb;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #61dafb;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Bagian Hero */
+.hero {
+    padding: 120px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 0 0 55%;
+}
+
+.hero-image {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    color: #61dafb;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h1 .highlight {
+    color: #61dafb;
+}
+
+.hero-description {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #aaa;
+    max-width: 90%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #61dafb;
+    color: #0a0a0a;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn:hover {
+    background: #3aa8d9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(97, 218, 251, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #61dafb;
+    color: #61dafb;
+}
+
+.btn-outline:hover {
+    background: #61dafb;
+    color: #0a0a0a;
+}
+
+/* Bagian Tentang Saya */
+.about {
+    padding: 100px 0;
+    border-bottom: 1px solid #222;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.skill {
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 0 0 calc(25% - 20px);
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(97, 218, 251, 0.1);
+}
+
+.skill-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #61dafb;
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.skill p {
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* Bagian Pengalaman */
+.experience {
+    padding: 100px 0;
+    border-bottom: 1px solid #222;
+}
+
+.timeline {
+    margin-top: 60px;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #222;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 50%;
+}
+
+.timeline-content {
+    width: 90%;
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content:before {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #111;
+}
+
+.timeline-item:nth-child(even) .timeline-content:before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #111;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 20px;
+    left: -120px;
+    color: #61dafb;
+    font-weight: 600;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: auto;
+    right: -120px;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #61dafb;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.timeline h4 {
+    color: #61dafb;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.timeline p {
+    color: #aaa;
+}
+
+/* Bagian Proyek */
+.projects {
+    padding: 100px 0;
+    border-bottom: 1px solid #222;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.project-card {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(97, 218, 251, 0.15);
+    border: 1px solid rgba(97, 218, 251, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-img::after {
+    opacity: 1;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #fff;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.project-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #61dafb;
+    transition: width 0.3s ease;
+}
+
+.project-card:hover h3::after {
+    width: 80px;
+}
+
+.project-card p {
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: rgba(97, 218, 251, 0.1);
+    color: #61dafb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(97, 218, 251, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-links {
+    display: flex;
+    margin-top: auto;
+}
+
+.project-links a {
+    margin-right: 15px;
+    color: #61dafb;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.project-links a i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.project-links a:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        border-radius: 10px;
+    }
+    
+    .project-img {
+        height: 180px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+    
+    .project-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Bagian Kontak */
+.contact {
+    padding: 100px 0;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.contact-info {
+    flex: 0 0 48%;
+}
+
+.contact-form {
+    flex: 0 0 48%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    font-size: 24px;
+    color: #61dafb;
+    margin-right: 20px;
+}
+
+.contact-details h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-details p, .contact-details a {
+    color: #aaa;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 40px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #111;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #61dafb;
+    color: #0a0a0a;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Desain Responsif */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .skill {
+        flex: 0 0 calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        flex: 0 0 100%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .skill {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .timeline:before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        padding-right: 0;
+        padding-left: 80px;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 80px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-date {
+        left: 80px;
+        top: -30px;
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-date {
+        left: 80px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content:before,
+    .timeline-item:nth-child(even) .timeline-content:before {
+        display: none;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        flex: 0 0 100%;
+    }
+
+    .contact-info {
+        margin-bottom: 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill {
+        flex: 0 0 100%;
+    }
+
+    .btn {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
