@@ -353,6 +353,7 @@ h2 {
     height: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid transparent;
 }
 
 .project-card:hover {
@@ -360,6 +361,8 @@ h2 {
     box-shadow: 0 15px 30px rgba(97, 218, 251, 0.15);
     border: 1px solid rgba(97, 218, 251, 0.2);
 }
+
+
 
 .project-img {
     width: 100%;
@@ -455,6 +458,63 @@ h2 {
     transform: translateY(-2px);
 }
 
+
+
+/* ===== Tech Stack Info Section ===== */
+.tech-stack {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tech-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #61dafb;
+    margin-bottom: 12px;
+}
+
+.tech-label i {
+    font-size: 12px;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #999;
+    padding: 5px 11px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-item i {
+    font-size: 10px;
+    color: #61dafb;
+}
+
+.tech-item:hover {
+    background: rgba(97, 218, 251, 0.08);
+    border-color: rgba(97, 218, 251, 0.2);
+    color: #ccc;
+    transform: translateY(-1px);
+}
+
 .project-links {
     display: flex;
     margin-top: auto;
@@ -495,6 +555,10 @@ h2 {
     .project-img {
         height: 200px;
     }
+
+    .tech-items {
+        gap: 6px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -512,6 +576,11 @@ h2 {
     
     .project-card h3 {
         font-size: 20px;
+    }
+
+    .tech-item {
+        font-size: 10px;
+        padding: 4px 9px;
     }
 }
 
@@ -612,6 +681,31 @@ footer {
 
     nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0a0a0a;
+        padding: 20px 0;
+        border-bottom: 1px solid #222;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    header {
+        position: relative;
     }
 
     .mobile-menu-btn {
